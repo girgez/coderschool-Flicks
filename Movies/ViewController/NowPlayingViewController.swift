@@ -1,21 +1,21 @@
 //
-//  TopRatedViewController.swift
+//  NowPlayingViewController.swift
 //  Movies
 //
-//  Created by GIRGEZ on 10/12/16.
+//  Created by Girge on 10/16/16.
 //  Copyright © 2016 GIRGEZ. All rights reserved.
 //
 
 import UIKit
 
-class TopRatedViewController: MoviesViewController {
+class NowPlayingViewController: MoviesViewController {
     @IBOutlet weak var outletTableView: UITableView!
     @IBOutlet weak var outletCollectionView: UICollectionView!
- 
+
     override func viewDidLoad() {
         self.tableView = outletTableView
         self.collectionView = outletCollectionView
-        self.type = MoviesViewControllerType.topRated
+        self.type = MoviesViewControllerType.nowPlaying
         super.viewDidLoad()
     }
 }

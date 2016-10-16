@@ -8,16 +8,22 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegate {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
+enum MoviesViewControllerType {
+    case nowPlaying
+    case topRated
+}
 
+class MoviesViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegate {
+    var tableView: UITableView!
+    var collectionView: UICollectionView!
+    
+    var type: MoviesViewControllerType!
     var movies = [NSDictionary]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Net.loadMovies(type: 1, isProgressHUDLoading: true, success: {
+        Net.loadMovies(type: type, isProgressHUDLoading: true, success: {
             self.movies = $0
             self.tableView.reloadData()
             self.collectionView.reloadData()
@@ -32,7 +38,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UICollectionV
     }
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
-        Net.loadMovies(type: 1, isProgressHUDLoading: false, success: {
+        Net.loadMovies(type: type, isProgressHUDLoading: false, success: {
                 self.movies = $0
                 self.tableView.reloadData()
                 self.collectionView.reloadData()

@@ -13,10 +13,10 @@ import ISMessages
 class Net {
     // d99e352cd5504b9d1aa0d540e0c594f1
     static let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-    static let urlMoviesPlaying = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+    static let urlMoviesNowPlaying = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
     static let urlMoviesTopRate = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=\(apiKey)")
     
-    static func loadMovies(type: Int, isProgressHUDLoading: Bool, success: @escaping (_ movies: [NSDictionary])->Void, fail: (()->Void)? = nil) {
+    static func loadMovies(type: MoviesViewControllerType, isProgressHUDLoading: Bool, success: @escaping (_ movies: [NSDictionary])->Void, fail: (()->Void)? = nil) {
         
         if !Net.isConnectedNetwork {
             ISMessages.showCardAlert(withTitle: "No Internet access!", message: "Please check your connection.", iconImage: nil, duration: 2, hideOnSwipe: true, hideOnTap: true, alertType: .error, alertPosition: .top)
@@ -30,8 +30,8 @@ class Net {
         
         let url: URL?
         
-        if type == 1 {
-            url = urlMoviesPlaying
+        if type == MoviesViewControllerType.nowPlaying {
+            url = urlMoviesNowPlaying
         } else {
             url = urlMoviesTopRate
         }
