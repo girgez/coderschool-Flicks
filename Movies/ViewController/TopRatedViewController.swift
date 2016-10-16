@@ -16,12 +16,11 @@ class TopRatedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ProgressHUD.show()
-        Net.loadMovies(type: 2, callback: {
+        
+        Net.loadMovies(type: 1, isProgressHUDLoading: true, success: {
             self.movies = $0
             self.tableView.reloadData()
             self.collectionView.reloadData()
-            ProgressHUD.dismiss()
         })
         
         var refreshControl = UIRefreshControl()
@@ -33,11 +32,13 @@ class TopRatedViewController: UIViewController {
     }
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
-        Net.loadMovies(type: 1, callback: {
+        Net.loadMovies(type: 1, isProgressHUDLoading: false, success: {
             self.movies = $0
             self.tableView.reloadData()
             self.collectionView.reloadData()
             refreshControl.endRefreshing()
+            }, fail: {
+                refreshControl.endRefreshing()
         })
     }
     

@@ -39,7 +39,7 @@
                             <tableViewSection headerTitle="View" id="ICg-jr-KUh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TMw-GN-O9v">
-                                        <rect key="frame" x="0.0" y="119" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TMw-GN-O9v" id="Wjd-Hq-kos">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -415,7 +415,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Z0w-eZ-9y1"/>
         <segue reference="PCo-Bx-Zrb"/>
-        <segue reference="Jel-O1-s4s"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -6,28 +6,38 @@
 	<dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ISMessages-ISMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ISMessages.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Movies.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>VHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08FEF1346D3CFD407B8827FABA446860</key>
+		<key>0EB0FB538E7C41053DE8FFB33ED7A636</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B97690A4D0767708AB10032C6EF0628C</key>
+		<key>31246B6C3999090D65B4BD82EAE44474</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA12A7B8043FB2088AEC06FF84343114</key>
+		<key>8BB7E9454D3572BB059F2A9F8D7DC895</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>903626F28705F42757E8B0051C3BC236</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFD3158CD2BBFE39A8E19DD1AC86E6EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

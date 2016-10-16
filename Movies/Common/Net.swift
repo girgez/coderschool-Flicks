@@ -8,7 +8,7 @@
 
 import Foundation
 import SystemConfiguration
-import  UIKit
+import ISMessages
 
 class Net {
     // d99e352cd5504b9d1aa0d540e0c594f1
@@ -16,7 +16,18 @@ class Net {
     static let urlMoviesPlaying = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
     static let urlMoviesTopRate = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=\(apiKey)")
     
-    static func loadMovies(type: Int, callback: @escaping (_ movies: [NSDictionary])->Void) {
+    static func loadMovies(type: Int, isProgressHUDLoading: Bool, success: @escaping (_ movies: [NSDictionary])->Void, fail: (()->Void)? = nil) {
+        
+        if !Net.isConnectedNetwork {
+            ISMessages.showCardAlert(withTitle: "No Internet access!", message: "Please check your connection.", iconImage: nil, duration: 2, hideOnSwipe: true, hideOnTap: true, alertType: .error, alertPosition: .top)
+            fail?()
+            return
+        }
+        
+        if isProgressHUDLoading {
+            ProgressHUD.show()
+        }
+        
         let url: URL?
         
         if type == 1 {
@@ -41,7 +52,11 @@ class Net {
                                     if let responseDictionary = try! JSONSerialization.jsonObject(
                                         with: data, options:[]) as? NSDictionary {
                                         if let movies = responseDictionary["results"] as? [NSDictionary] {
-                                            callback(movies)
+                                            success(movies)
+                                            
+                                            if isProgressHUDLoading {
+                                                ProgressHUD.dismiss()
+                                            }
                                         }
                                     }
                                 }

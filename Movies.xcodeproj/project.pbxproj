@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00B6227C1DB388A300031D08 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B6227B1DB388A300031D08 /* AlertDialog.swift */; };
+		00B622801DB3A3FA00031D08 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B6227F1DB3A3FA00031D08 /* AlertMessage.swift */; };
 		32093ABA1DAF83300009D08C /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32093AB91DAF83300009D08C /* ProgressHUD.swift */; };
 		320E38BB1DAD40AB001193BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E38BA1DAD40AB001193BF /* AppDelegate.swift */; };
 		320E38C01DAD40AB001193BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320E38BE1DAD40AB001193BF /* Main.storyboard */; };
 		320E38C21DAD40AB001193BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320E38C11DAD40AB001193BF /* Assets.xcassets */; };
 		320E38C51DAD40AB001193BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320E38C31DAD40AB001193BF /* LaunchScreen.storyboard */; };
 		320E38CE1DAD42F4001193BF /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E38CD1DAD42F4001193BF /* MoviesViewController.swift */; };
-		322249BC1DB1FE460065B2EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 322249BB1DB1FE460065B2EA /* README.md */; };
 		32CB61631DAE781800432B22 /* TopRatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CB61621DAE781800432B22 /* TopRatedViewController.swift */; };
 		32D80F2F1DAD491500AB7626 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D80F2E1DAD491500AB7626 /* MovieCell.swift */; };
 		32D80F321DAD4AC800AB7626 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D80F311DAD4AC800AB7626 /* Net.swift */; };
@@ -26,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00B6227B1DB388A300031D08 /* AlertDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertDialog.swift; path = Common/AlertDialog.swift; sourceTree = "<group>"; };
+		00B6227F1DB3A3FA00031D08 /* AlertMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertMessage.swift; path = Common/AlertMessage.swift; sourceTree = "<group>"; };
 		32093AB91DAF83300009D08C /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressHUD.swift; path = Common/ProgressHUD.swift; sourceTree = "<group>"; };
 		320E38B71DAD40AB001193BF /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		320E38BA1DAD40AB001193BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +34,6 @@
 		320E38C41DAD40AB001193BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		320E38C61DAD40AB001193BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		320E38CD1DAD42F4001193BF /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesViewController.swift; path = ViewController/MoviesViewController.swift; sourceTree = "<group>"; };
-		322249BB1DB1FE460065B2EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		32CB61621DAE781800432B22 /* TopRatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopRatedViewController.swift; path = ViewController/TopRatedViewController.swift; sourceTree = "<group>"; };
 		32D80F2E1DAD491500AB7626 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieCell.swift; path = View/MovieCell.swift; sourceTree = "<group>"; };
 		32D80F311DAD4AC800AB7626 /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Net.swift; path = Common/Net.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				320E38C11DAD40AB001193BF /* Assets.xcassets */,
 				320E38C31DAD40AB001193BF /* LaunchScreen.storyboard */,
 				320E38C61DAD40AB001193BF /* Info.plist */,
-				322249BB1DB1FE460065B2EA /* README.md */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -120,7 +117,7 @@
 				32D80F311DAD4AC800AB7626 /* Net.swift */,
 				32093AB91DAF83300009D08C /* ProgressHUD.swift */,
 				32FE18BF1DB1521B0076104F /* Share.swift */,
-				00B6227B1DB388A300031D08 /* AlertDialog.swift */,
+				00B6227F1DB3A3FA00031D08 /* AlertMessage.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B6227C1DB388A300031D08 /* AlertDialog.swift in Sources */,
 				320E38BB1DAD40AB001193BF /* AppDelegate.swift in Sources */,
 				32D80F341DAD5E9D00AB7626 /* MovieDetailViewController.swift in Sources */,
 				320E38CE1DAD42F4001193BF /* MoviesViewController.swift in Sources */,
@@ -276,7 +272,7 @@
 				32FE18C21DB156CC0076104F /* MovieCollectionCell.swift in Sources */,
 				32D80F321DAD4AC800AB7626 /* Net.swift in Sources */,
 				32CB61631DAE781800432B22 /* TopRatedViewController.swift in Sources */,
-				322249BC1DB1FE460065B2EA /* README.md in Sources */,
+				00B622801DB3A3FA00031D08 /* AlertMessage.swift in Sources */,
 				32093ABA1DAF83300009D08C /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

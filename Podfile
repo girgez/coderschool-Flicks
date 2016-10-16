@@ -9,4 +9,5 @@ target 'Movies' do
   pod 'AFNetworking', '~> 3.1'
   pod 'VHUD', '~> 1.0'
   pod 'SVProgressHUD'
+  pod 'ISMessages'
 end

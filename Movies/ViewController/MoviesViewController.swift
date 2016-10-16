@@ -17,17 +17,11 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UICollectionV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !Net.isConnectedNetwork {
-            AlertDialog.notConnectInternet()
-        } else {
-            ProgressHUD.show()
-            Net.loadMovies(type: 1, callback: {
-                self.movies = $0
-                self.tableView.reloadData()
-                self.collectionView.reloadData()
-                ProgressHUD.dismiss()
-            })
-        }
+        Net.loadMovies(type: 1, isProgressHUDLoading: true, success: {
+            self.movies = $0
+            self.tableView.reloadData()
+            self.collectionView.reloadData()
+        })
         
         var refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction), for: UIControlEvents.valueChanged)
@@ -38,11 +32,13 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UICollectionV
     }
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
-        Net.loadMovies(type: 1, callback: {
-            self.movies = $0
-            self.tableView.reloadData()
-            self.collectionView.reloadData()
-            refreshControl.endRefreshing()
+        Net.loadMovies(type: 1, isProgressHUDLoading: false, success: {
+                self.movies = $0
+                self.tableView.reloadData()
+                self.collectionView.reloadData()
+                refreshControl.endRefreshing()
+            }, fail: {
+                refreshControl.endRefreshing()
         })
     }
     
